@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):
+         1. Сложение
+         2. Разность
+         3. Умножение
+         4. Деление*/
+
+         function add(a, b) {
+                 return a + b;
+         }
+         /* разность*/
+         function subtract(a, b) {
+             // Вычесть из большего числа меньшее или возвратить 0, если числа равны
+             return a > b ? a - b : (b > a ? b - a : 0);
+         }
+         /* умноженин*/
+         function multiply(a, b) {
+             return a * b;
+         }
+         /* деление*/
+         function divide(a, b) {
+                        // Поскольку предполагается, что в делителе не будет нуля, можно делить напрямую
+              return a / b;
+          }
+
+          /* вызываем функции*/
+          console.log(add(2, 6));        
+          console.log(subtract(10, 4));
+          console.log(subtract(4, 10)); 
+          console.log(subtract(5, 5)); 
+          console.log(multiply(3, 7));  
+          console.log(divide(10, 2));  
+
+
+    </script>
+</body>
+</html>

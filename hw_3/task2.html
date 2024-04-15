@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*  Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что     значение задано неверно
+        Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер         заработной платы за вычетом налогов равен значение"*/
+
+       function calculateNetSalary() {
+              let input = prompt("Введите размер заработной платы:");
+              let salary = parseFloat(input);
+
+              if (isNaN(salary)) {
+              console.log("Значение задано неверно.");
+              } else {
+              let tax = salary * 0.13;
+              let netSalary = salary - tax;
+              console.log(`Размер заработной платы за вычетом налогов равен ${netSalary}`);
+              }
+        }
+
+        calculateNetSalary();
+
+
+    </script>
+</body>
+</html>

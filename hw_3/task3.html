@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел*/
+       function findMaxOfThree() {
+             // Запрос ввода трех чисел у пользователя
+             let num1 = parseFloat(prompt("Введите первое число:"));
+             let num2 = parseFloat(prompt("Введите второе число:"));
+             let num3 = parseFloat(prompt("Введите третье число:"));
+
+             // Проверка на ввод не числовых значений
+             if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+             console.log("Введены недопустимые значения. Убедитесь, что вводите только числа.");
+
+             return; // Возврат из функции, если хотя бы одно значение не является числом
+             }
+
+             // Использование Math.max для нахождения максимального значения
+             let max = Math.max(num1, num2, num3);
+
+             // Вывод максимального числа
+             console.log(`Максимальное значение среди введенных чисел: ${max}`);
+       }
+
+       // Вызов функции
+       findMaxOfThree();
+
+
+
+    </script>
+</body>
+</html>
