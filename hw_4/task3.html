@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /*  Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+        1. Рассчитать сумму элементов этого массива
+        2. Найти минимальное число
+        3. Найти есть ли в этом массиве число 3    */
+        
+        // Генерация массива из 5 случайных цифр (0-9)
+        function generateRandomArray() {
+            let arr = [];
+            for (let i = 0; i < 5; i++) {
+             arr.push(Math.floor(Math.random() * 10)); // Math.floor(Math.random() * 10) дает         случайное число от 0 до 9
+            }
+            return arr;
+        }
+
+               // Расчет суммы массива
+        function sumArray(arr) {
+                    return arr.reduce((acc, val) => acc + val, 0);
+        }
+
+        // Найти минимальное значение в массиве
+        function findMin(arr) {
+            return Math.min(...arr);
+        }
+
+        // Проверка на наличие числа 3 в массиве
+        function containsThree(arr) {
+            return arr.includes(3);
+        }
+
+      // Объединение всех функций для демонстрации работы
+      function processArray() {
+         const randomArray = generateRandomArray();
+              console.log('Сгенерированный массив:', randomArray );
+    
+         const arraySum = sumArray(randomArray);
+         console.log('Сумма элементов массива:', arraySum);
+    
+         const minNumber = findMin(randomArray);
+         console.log('Минимальное число в массиве:', minNumber);
+    
+         const hasThree = containsThree(randomArray);
+         console.log('Содержится ли в массиве число 3:', hasThree ? 'Да' : 'Нет');
+      }
+
+      // Выполним функцию
+      processArray();
+
+    </script>
+</body>
+</html>
